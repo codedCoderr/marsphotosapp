@@ -1,0 +1,1 @@
+import React from 'react';import DisplayItem from './DisplayItem';import '../containers/DisplayPage.css';const DisplayPage=({images})=>{const imagess=images.map(image=>{return<DisplayItem key={image.id}image={image.img_src}/>});return<div className='image-list'>{imagess}</div>};export default DisplayPage
