@@ -3,16 +3,14 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const axios = require('axios');
-// const helmet = require('helmet');
 require('dotenv').config();
-// const cacheControl = require('express-cache-controller');
+
 app.use(cors());
 app.options('*', cors());
 
-// app.use(helmet());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: !0 }));
-// app.use(cacheControl({ maxAge: 5 }));
+
 const API_KEY = process.env.API_KEY;
 const baseURL = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity';
 
