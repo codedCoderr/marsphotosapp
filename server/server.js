@@ -26,7 +26,7 @@ app.post('/getimages', async (req, res) => {
     );
     res.send(response.data);
   } catch (error) {
-    console.log(error);
+    return error.message;
   }
 });
 
@@ -34,3 +34,4 @@ const PORT = process.env.PORT || 4500;
 app.listen(PORT, () => {
   console.log('Server started');
 });
+
